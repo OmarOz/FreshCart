@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ .row{
+    @apply flex flex-wrap px-4 py-8 items-center justify-center;
+ }
+
+ .btn{
+    @apply px-4 py-2 w-full rounded-lg text-white bg-green-600;
+ }
+
+ .product .btn{
+    opacity: 0;
+    transform: translateY(100%);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+ }
+ .product:hover .btn{
+    opacity: 100%;
+    transform: translateY(0%);
+ }
